@@ -239,8 +239,27 @@ section.visible {
   font-size: 0.95rem;
 }
 
-.form-group { margin-bottom: 1rem; }
+.form-group {
+  margin-bottom: 1rem;
+  min-width: 0;
+  overflow: hidden;
+}
 @media (min-width: 640px) { .form-group { margin-bottom: 1.25rem; } }
+
+.booking-form-glass .grid > * {
+  min-width: 0;
+}
+
+.form-input {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Date inputs - prevent overflow */
+input[type="date"].form-input {
+  min-width: 0;
+  max-width: 100%;
+}
 
 /* Mobile form responsiveness */
 @media (max-width: 639px) {
@@ -253,6 +272,9 @@ section.visible {
   .form-input[type="tel"],
   select.form-input {
     min-height: 48px;
+  }
+  input[type="date"].form-input {
+    width: 100%;
   }
   textarea.form-input {
     min-height: 100px;
@@ -329,7 +351,8 @@ section.visible {
   .booking-form-glass,
   .form-input,
   select.form-input,
-  textarea.form-input {
+  textarea.form-input,
+  input[type="date"].form-input {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
@@ -340,6 +363,7 @@ section.visible {
   }
   .form-group {
     max-width: 100%;
+    min-width: 0;
   }
 }
 
@@ -365,14 +389,9 @@ section.visible {
 }
 .room-slide { width: 33.333%; flex: 0 0 33.333%; object-fit: contain; object-position: center; background: rgba(253, 246, 233, 0.3); }
 
-/* Contact grid - 2 columns, well designed */
-.contact-grid-item {
-  padding: 0.75rem;
-  border-radius: 1rem;
-  transition: background 0.2s;
-}
-.contact-grid-item:hover {
-  background: rgba(253, 246, 233, 0.5);
+/* Contact icons - icon only */
+.contact-icon-btn {
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 /* Hero slideshow on home */
