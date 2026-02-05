@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nest Home BnB - Luxury BnB Experience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="h-full font-body" style="background: linear-gradient(135deg, #FDF6E9 0%, #FFFBF5 50%, #FDF6E9 100%);">
+  <div class="h-full overflow-auto">
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="decorative-circle w-64 md:w-96 h-64 md:h-96 -top-48 -right-48 animate-float"></div>
+      <div class="decorative-circle w-48 md:w-64 h-48 md:h-64 top-1/3 -left-32 animate-float" style="animation-delay: 2s;"></div>
+      <div class="decorative-circle w-56 md:w-80 h-56 md:h-80 bottom-20 right-1/4 animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 glass safe-top">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform flex-shrink-0">
+              <svg class="w-5 h-5 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24" style="color: #FDF6E9;"><path d="M12 3L4 9v12h5v-7h6v7h5V9l-8-6z"/></svg>
+            </div>
+            <span class="font-display text-xl sm:text-2xl font-bold gradient-text">Nest Home BnB</span>
+          </a>
+          <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+            <a href="index.html" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Home</a>
+            <a href="accommodation.html" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Accommodation</a>
+            <a href="index.html#about" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">About</a>
+            <a href="amenities.html" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Amenities</a>
+            <a href="index.html#contact" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Contact</a>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a href="book.html" class="hidden sm:inline-flex btn-primary px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-white font-semibold shadow-lg text-sm sm:text-base">Book Now</a>
+            <button id="hamburger-btn" class="lg:hidden hamburger p-2 -mr-2 focus:outline-none" aria-label="Toggle menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+          <div class="pt-4 pb-2 space-y-1 border-t border-amber-200 mt-4">
+            <a href="index.html" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Home</a>
+            <a href="accommodation.html" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Accommodation</a>
+            <a href="index.html#about" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">About</a>
+            <a href="amenities.html" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Amenities</a>
+            <a href="index.html#contact" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Contact</a>
+            <a href="book.html" class="block mt-4"><button class="w-full btn-primary px-6 py-4 rounded-full text-white font-semibold text-center">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 visible" style="opacity: 1; transform: none;">
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="space-y-6 sm:space-y-8 order-2 lg:order-1">
+            <div class="inline-block glass rounded-full px-4 py-2 animate-fade-in-up"><span class="text-amber-800 font-medium text-sm">Premium BnB Experience</span></div>
+            <h1 class="font-display hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up delay-100" style="color: #5C4033;">Your Home Away From Home</h1>
+            <p class="text-base sm:text-lg md:text-xl text-amber-800 leading-relaxed animate-fade-in-up delay-200 opacity-0" style="animation-fill-mode: forwards;">Experience luxury and comfort in our handpicked properties. Perfect for families, couples, and solo travelers seeking an unforgettable stay.</p>
+            <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 animate-fade-in-up delay-300 opacity-0" style="animation-fill-mode: forwards;">
+              <a href="book.html" class="btn-primary btn-book-animate px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-semibold text-base sm:text-lg shadow-xl flex items-center justify-center gap-2 sm:gap-3">
+                Book Your Stay
+              </a>
+              <a href="accommodation.html" class="glass px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover-lift flex items-center justify-center gap-2" style="color: #5C4033;">
+                View Accommodation <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-8 pt-4 animate-fade-in-up delay-400 opacity-0" style="animation-fill-mode: forwards;">
+              <div class="text-center min-w-[80px]"><div class="font-display stat-number text-3xl sm:text-4xl font-bold gradient-text">8</div><div class="text-amber-700 text-xs sm:text-sm">Luxury Rooms</div></div>
+              <div class="hidden sm:block w-px h-12 bg-amber-300"></div>
+              <div class="text-center min-w-[80px]"><div class="font-display stat-number text-3xl sm:text-4xl font-bold gradient-text">New</div><div class="text-amber-700 text-xs sm:text-sm">Boutique Property</div></div>
+              <div class="hidden sm:block w-px h-12 bg-amber-300"></div>
+              <div class="text-center min-w-[80px]"><div class="font-display stat-number text-3xl sm:text-4xl font-bold gradient-text">4.9</div><div class="text-amber-700 text-xs sm:text-sm">Rating</div></div>
+            </div>
+          </div>
+          <div class="relative order-1 lg:order-2">
+            <div class="glass rounded-2xl sm:rounded-3xl p-3 sm:p-4 hover-lift overflow-hidden">
+              <div class="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3]">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Nest Home BnB exterior" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 glass rounded-lg sm:rounded-xl p-3 sm:p-4">
+                  <div class="flex items-center justify-between gap-2">
+                    <div class="min-w-0"><h3 class="font-display text-lg sm:text-xl font-bold truncate" style="color: #5C4033;">Luxury Villa</h3><p class="text-amber-700 text-xs sm:text-sm">Beachfront Property</p></div>
+                    <div class="text-right flex-shrink-0"><div class="font-display text-xl sm:text-2xl font-bold" style="color: #5C4033;">780,000 TSh</div><div class="text-amber-700 text-xs sm:text-sm">per night</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 glass rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg hidden sm:block">
+              <div class="flex items-center gap-2"><svg class="w-6 h-6 text-amber-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><div><div class="font-bold text-sm sm:text-base" style="color: #5C4033;">4.9</div><div class="text-xs text-amber-700">Rating</div></div></div>
+            </div>
+            <div class="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 glass rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg hidden sm:block">
+              <div class="flex items-center gap-2"><svg class="w-6 h-6 text-amber-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L4 9v12h5v-7h6v7h5V9l-8-6zm-1 9h2v4h-2v-4z"/></svg><div><div class="font-bold text-sm sm:text-base" style="color: #5C4033;">Verified</div><div class="text-xs text-amber-700">Host</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-20 md:py-24 px-4 sm:px-6 visible" style="opacity: 1; transform: none;">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="glass rounded-2xl sm:rounded-3xl p-4 sm:p-6 hover-lift overflow-hidden">
+              <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="aspect-square rounded-xl sm:rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80" alt="Home exterior" class="w-full h-full object-cover"></div>
+                <div class="aspect-square rounded-xl sm:rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Living room" class="w-full h-full object-cover"></div>
+                <div class="aspect-square rounded-xl sm:rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=400&q=80" alt="Sunrise view" class="w-full h-full object-cover"></div>
+                <div class="aspect-square rounded-xl sm:rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="Pool amenity" class="w-full h-full object-cover"></div>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6 sm:space-y-8 order-1 lg:order-2">
+            <span class="inline-block glass rounded-full px-4 py-2 text-amber-800 font-medium text-sm">About Our Property</span>
+            <h2 class="font-display section-title text-3xl sm:text-4xl md:text-5xl font-bold" style="color: #5C4033;">A Sanctuary of Comfort</h2>
+            <p class="text-base sm:text-lg text-amber-700 leading-relaxed">Welcome to Nest Home BnB – a meticulously designed luxury boutique property nestled in a serene location. Each of our carefully curated rooms offers a unique blend of comfort, elegance, and modern amenities, perfect for creating unforgettable memories.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div class="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 hover-lift flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-100/60 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-display text-lg sm:text-xl font-bold mb-1 sm:mb-2" style="color: #5C4033;">Luxurious</h3>
+                  <p class="text-amber-700 text-xs sm:text-sm">Premium amenities and thoughtful design.</p>
+                </div>
+              </div>
+              <div class="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 hover-lift flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-100/60 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-display text-lg sm:text-xl font-bold mb-1 sm:mb-2" style="color: #5C4033;">Prime Location</h3>
+                  <p class="text-amber-700 text-xs sm:text-sm">Centrally located with easy access.</p>
+                </div>
+              </div>
+              <div class="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 hover-lift flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-100/60 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-display text-lg sm:text-xl font-bold mb-1 sm:mb-2" style="color: #5C4033;">Curated Comfort</h3>
+                  <p class="text-amber-700 text-xs sm:text-sm">Handpicked for memorable stays.</p>
+                </div>
+              </div>
+              <div class="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 hover-lift flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-100/60 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-display text-lg sm:text-xl font-bold mb-1 sm:mb-2" style="color: #5C4033;">Personal Touch</h3>
+                  <p class="text-amber-700 text-xs sm:text-sm">Attentive staff for your comfort.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 md:py-24 px-4 sm:px-6 visible" style="opacity: 1; transform: none;">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="inline-block glass rounded-full px-4 py-2 text-amber-800 font-medium text-sm mb-4">Get In Touch</span>
+          <h2 class="font-display section-title text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style="color: #5C4033;">Contact Us</h2>
+          <p class="text-amber-700 text-base sm:text-lg">Reach out for bookings, inquiries, or support. We're here to help.</p>
+        </div>
+        <div class="glass rounded-3xl p-8 sm:p-12">
+          <div class="grid sm:grid-cols-2 gap-8 mb-10">
+            <a href="#" id="whatsapp-link" class="flex items-center gap-4 group" title="Chat on WhatsApp">
+              <div class="w-14 h-14 rounded-full glass flex items-center justify-center flex-shrink-0 group-hover:bg-amber-100/60 transition-colors">
+                <svg class="w-7 h-7 text-amber-800" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold text-lg" style="color: #5C4033;">WhatsApp</div>
+                <span class="text-amber-600 text-sm">Chat with us</span>
+              </div>
+            </a>
+            <a href="#" id="call-link" class="flex items-center gap-4 group" title="Call us">
+              <div class="w-14 h-14 rounded-full glass flex items-center justify-center flex-shrink-0 group-hover:bg-amber-100/60 transition-colors">
+                <svg class="w-7 h-7 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold text-lg" style="color: #5C4033;">Call us</div>
+                <span class="text-amber-600 text-sm">Tap to call</span>
+              </div>
+            </a>
+            <a href="mailto:hello@nesthomebnb.com" class="flex items-center gap-4 group" title="Email us">
+              <div class="w-14 h-14 rounded-full glass flex items-center justify-center flex-shrink-0 group-hover:bg-amber-100/60 transition-colors">
+                <svg class="w-7 h-7 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold text-lg" style="color: #5C4033;">Email</div>
+                <span class="text-amber-600 text-sm">Send us a message</span>
+              </div>
+            </a>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-full glass flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-amber-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold text-lg" style="color: #5C4033;">Location</div>
+                <p class="text-amber-700">Serving properties worldwide</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-4">
+            <a href="book.html" class="btn-primary inline-flex px-10 py-4 rounded-full text-white font-semibold text-lg">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 sm:py-12 px-4 sm:px-6 border-t border-amber-200 safe-bottom">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24" style="color: #FDF6E9;"><path d="M12 3L4 9v12h5v-7h6v7h5V9l-8-6z"/></svg>
+          </div>
+          <span class="font-display text-lg sm:text-xl font-bold" style="color: #5C4033;">Nest Home BnB</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <a href="#" class="text-amber-700 hover:text-amber-900 transition-colors text-sm sm:text-base">Privacy Policy</a>
+          <a href="#" class="text-amber-700 hover:text-amber-900 transition-colors text-sm sm:text-base">Terms of Service</a>
+          <a href="index.html#contact" class="text-amber-700 hover:text-amber-900 transition-colors text-sm sm:text-base">Contact</a>
+        </div>
+        <p class="text-amber-600 text-xs sm:text-sm">© 2025 Nest Home BnB. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    const num = (typeof NEST_CONFIG !== 'undefined' ? NEST_CONFIG.whatsapp_number : '+255234567890').replace(/\D/g, '');
+    const phone = typeof NEST_CONFIG !== 'undefined' ? NEST_CONFIG.phone_number || NEST_CONFIG.whatsapp_number : '+255234567890';
+    const waLink = document.getElementById('whatsapp-link');
+    const callLink = document.getElementById('call-link');
+    if (waLink) waLink.href = 'https://wa.me/' + num;
+    if (callLink) callLink.href = 'tel:' + phone.replace(/\s/g, '');
+  </script>
+</body>
+</html>

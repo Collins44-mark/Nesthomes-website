@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay - Nest Home BnB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="h-full font-body min-h-screen" style="background: linear-gradient(135deg, #FDF6E9 0%, #FFFBF5 50%, #FDF6E9 100%);">
+  <div class="h-full overflow-auto">
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+      <div class="decorative-circle w-64 md:w-96 h-64 md:h-96 -top-48 -right-48 animate-float"></div>
+      <div class="decorative-circle w-48 md:w-64 h-48 md:h-64 top-1/3 -left-32 animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 glass safe-top">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform flex-shrink-0">
+              <svg class="w-5 h-5 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24" style="color: #FDF6E9;"><path d="M12 3L4 9v12h5v-7h6v7h5V9l-8-6z"/></svg>
+            </div>
+            <span class="font-display text-xl sm:text-2xl font-bold gradient-text">Nest Home BnB</span>
+          </a>
+          <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+            <a href="index.html" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Home</a>
+            <a href="accommodation.html" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Accommodation</a>
+            <a href="index.html#about" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">About</a>
+            <a href="amenities.html" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Amenities</a>
+            <a href="index.html#contact" class="nav-link font-medium text-amber-900 hover:text-amber-700 transition-colors">Contact</a>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a href="book.html" class="hidden sm:inline-flex btn-primary px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-white font-semibold shadow-lg text-sm sm:text-base">Book Now</a>
+            <button id="hamburger-btn" class="lg:hidden hamburger p-2 -mr-2 focus:outline-none" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+          <div class="pt-4 pb-2 space-y-1 border-t border-amber-200 mt-4">
+            <a href="index.html" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Home</a>
+            <a href="accommodation.html" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Accommodation</a>
+            <a href="index.html#about" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">About</a>
+            <a href="amenities.html" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Amenities</a>
+            <a href="index.html#contact" class="mobile-nav-link block py-3 px-4 font-medium text-amber-900 hover:bg-amber-100 rounded-lg transition-colors">Contact</a>
+            <a href="book.html" class="block mt-4"><button class="w-full btn-primary px-6 py-4 rounded-full text-white font-semibold text-center">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 visible" style="opacity: 1; transform: none;">
+      <div class="max-w-2xl mx-auto w-full">
+        <div class="text-center mb-6 sm:mb-10">
+          <h1 class="font-display section-title text-2xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3 tracking-wide" style="color: #5C4033;">BOOK YOUR STAY</h1>
+          <p class="text-amber-700 text-sm sm:text-base px-1">Fill out the form below and your booking request will be sent directly to us via WhatsApp.</p>
+        </div>
+
+        <div class="booking-form-container relative">
+          <form id="booking-form" class="booking-form-glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+            <div class="form-group sm:col-span-2">
+              <label class="form-label" for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" class="form-input" placeholder="" required>
+              <span class="error-message" id="err-fullName"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="" required>
+              <span class="error-message" id="err-email"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone (with country code) *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="" required>
+              <span class="error-message" id="err-phone"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="checkIn">Check-in Date *</label>
+              <input type="date" id="checkIn" name="checkIn" class="form-input" required>
+              <span class="error-message" id="err-checkIn"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="checkOut">Check-out Date *</label>
+              <input type="date" id="checkOut" name="checkOut" class="form-input" required>
+              <span class="error-message" id="err-checkOut"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guests">Number of Guests *</label>
+              <select id="guests" name="guests" class="form-input" required>
+                <option value="">Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8+ Guests</option>
+              </select>
+              <span class="error-message" id="err-guests"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="room">Room / Property *</label>
+              <select id="room" name="room" class="form-input" required>
+                <option value="">Select room</option>
+                <option value="The Royal Master - 780,000 TSh/night">The Royal Master - 780,000 TSh/night</option>
+                <option value="The Garden View - 520,000 TSh/night">The Garden View - 520,000 TSh/night</option>
+                <option value="The Nest Room - 335,000 TSh/night">The Nest Room - 335,000 TSh/night</option>
+              </select>
+              <span class="error-message" id="err-room"></span>
+            </div>
+            <div class="form-group sm:col-span-2">
+              <label class="form-label" for="specialRequests">Special Requests</label>
+              <textarea id="specialRequests" name="specialRequests" class="form-input min-h-[100px]" placeholder=""></textarea>
+            </div>
+          </div>
+
+          <div id="nights-display" class="mb-6 text-center text-amber-700 text-sm hidden"></div>
+
+          <button type="submit" id="submit-btn" class="btn-primary w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-white font-semibold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 mx-auto min-h-[48px] sm:min-h-[52px]">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send to WhatsApp
+          </button>
+        </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    const form = document.getElementById('booking-form');
+    const checkIn = document.getElementById('checkIn');
+    const checkOut = document.getElementById('checkOut');
+    const nightsDisplay = document.getElementById('nights-display');
+
+    // Set min date to today
+    const today = new Date().toISOString().split('T')[0];
+    checkIn.setAttribute('min', today);
+
+    // Pre-select room from URL (e.g. book.html?room=royal)
+    const params = new URLSearchParams(window.location.search);
+    const roomParam = params.get('room');
+    const roomSelect = document.getElementById('room');
+    if (roomParam && roomSelect) {
+      const roomMap = { royal: 'The Royal Master - 780,000 TSh/night', garden: 'The Garden View - 520,000 TSh/night', nest: 'The Nest Room - 335,000 TSh/night' };
+      const roomValue = roomMap[roomParam.toLowerCase()];
+      if (roomValue) {
+        roomSelect.value = roomValue;
+      }
+    }
+
+    function clearErrors() {
+      document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+      document.querySelectorAll('.form-input.error').forEach(el => el.classList.remove('error'));
+    }
+
+    function showError(fieldId, message) {
+      const input = document.getElementById(fieldId);
+      const errEl = document.getElementById('err-' + fieldId);
+      if (input) input.classList.add('error');
+      if (errEl) errEl.textContent = message;
+    }
+
+    function validateForm() {
+      clearErrors();
+      let valid = true;
+
+      const fullName = document.getElementById('fullName').value.trim();
+      if (!fullName) { showError('fullName', 'Please enter your name'); valid = false; }
+
+      const email = document.getElementById('email').value.trim();
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email) { showError('email', 'Please enter your email'); valid = false; }
+      else if (!emailRe.test(email)) { showError('email', 'Please enter a valid email'); valid = false; }
+
+      const phone = document.getElementById('phone').value.trim().replace(/\s/g, '');
+      if (!phone) { showError('phone', 'Please enter your phone number'); valid = false; }
+      else if (phone.length < 10) { showError('phone', 'Please enter a valid phone number'); valid = false; }
+
+      const checkInVal = checkIn.value;
+      const checkOutVal = checkOut.value;
+      if (!checkInVal) { showError('checkIn', 'Please select check-in date'); valid = false; }
+      if (!checkOutVal) { showError('checkOut', 'Please select check-out date'); valid = false; }
+      if (checkInVal && checkOutVal) {
+        const ci = new Date(checkInVal);
+        const co = new Date(checkOutVal);
+        if (co <= ci) { showError('checkOut', 'Check-out must be after check-in'); valid = false; }
+      }
+
+      const guests = document.getElementById('guests').value;
+      if (!guests) { showError('guests', 'Please select number of guests'); valid = false; }
+
+      const room = document.getElementById('room').value;
+      if (!room) { showError('room', 'Please select a room'); valid = false; }
+
+      return valid;
+    }
+
+    function calculateNights() {
+      const ci = checkIn.value;
+      const co = checkOut.value;
+      if (!ci || !co) return;
+      const start = new Date(ci);
+      const end = new Date(co);
+      if (end <= start) return;
+      const nights = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+      nightsDisplay.textContent = `📆 ${nights} night${nights > 1 ? 's' : ''}`;
+      nightsDisplay.classList.remove('hidden');
+    }
+
+    checkIn.addEventListener('change', () => {
+      if (checkOut.value && new Date(checkOut.value) <= new Date(checkIn.value)) checkOut.value = '';
+      checkOut.setAttribute('min', checkIn.value);
+      calculateNights();
+    });
+    checkOut.addEventListener('change', calculateNights);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!validateForm()) return;
+
+      const fullName = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const checkInVal = checkIn.value;
+      const checkOutVal = checkOut.value;
+      const guests = document.getElementById('guests').value;
+      const room = document.getElementById('room').value;
+      const specialRequests = document.getElementById('specialRequests').value.trim();
+
+      const start = new Date(checkInVal);
+      const end = new Date(checkOutVal);
+      const nights = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+
+      const message = [
+        '🏠 *Nest Home BnB - Booking Request*',
+        '',
+        '*Guest Details:*',
+        `• Name: ${fullName}`,
+        `• Email: ${email}`,
+        `• Phone: ${phone}`,
+        '',
+        '*Stay Details:*',
+        `• Check-in: ${checkInVal}`,
+        `• Check-out: ${checkOutVal}`,
+        `• Nights: ${nights}`,
+        `• Guests: ${guests}`,
+        `• Room: ${room}`,
+        ''
+      ];
+      if (specialRequests) message.push(`*Special Requests:*\n${specialRequests}`);
+
+      const number = (typeof NEST_CONFIG !== 'undefined' ? NEST_CONFIG.whatsapp_number : '+12345678900').replace(/\D/g, '');
+      const url = `https://wa.me/${number}?text=${encodeURIComponent(message.join('\n'))}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
